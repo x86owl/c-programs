@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // This program is used to showcase the BANKING PROGRAM
 
@@ -6,12 +8,11 @@ void checkBalance(float balance);
 float deposit();
 float withdraw(float balance);
 
-int main(){
-
+int main(int argc, char *argv[]) {
     int choice = 0;
     float balance = 0.0f;
 
-    printf("*** WELCOME TO THE BANK ***");
+    puts("*** WELCOME TO THE BANK ***");
 
     do{
         printf("\nselect an option:\n");
