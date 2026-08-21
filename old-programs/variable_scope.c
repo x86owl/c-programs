@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // This script is used to showcase the Variable Scope
 // outside of function is called global scope
@@ -6,21 +7,17 @@
 // Better to use local scope in c  | don't use global cause (hard to debug it)
 
 int add(int x, int y){
-    int result = x + y;
-    return result;
+    return x + y;
 }
 
-int main(){ 
+int main(int argc, char *agrv[]) { 
+    int x = 39, y = 49;;
+    int result;
 
-    int x = 0;
-    int y = 0;
+    puts("Initialized two numbers");
 
-    printf("Enter two number to add\n");
-    scanf("%d", &x);
-    scanf("%d", &y);
-    int result = add(x,y);
-    printf("%d\n", result);
-    
+    result = add(x, y);
+    fprintf(stdout, "Result  %d\n", result);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
